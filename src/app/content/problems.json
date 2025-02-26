@@ -1,0 +1,25 @@
+{
+    "problems": [
+        {
+            "name": "Switching tabs",
+            "description": "Switching tabs is a common task in web applications. It involves changing the active tab to display different content. This can be done using JavaScript to manipulate the DOM and update the active state of the tabs.",
+            "component": "SwitchingTabsComponent",
+            "tags": ["tabs", "navigation", "ui", "state"],
+            "difficulty": "easy",
+            "providedContent": [
+                {
+                    "name": "Tab 1",
+                    "content": "Content for Tab 1"
+                },
+                {
+                    "name": "Tab 2",
+                    "content": "Content for Tab 2"
+                },
+                {
+                    "name": "Tab 3",
+                    "content": "Content for Tab 3"
+                }
+            ]
+        }
+    ]
+}
