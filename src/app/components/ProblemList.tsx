@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Problem } from '@/src/types';
 import ProblemButton from './ProblemButton';
-import { getProblemComponent } from '../utils';
+import { getProblemComponent } from '../utils/getProblemComponent';
 
 export type ProblemListProps = {
     problems: Problem[];

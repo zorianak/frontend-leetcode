@@ -2,9 +2,10 @@
     "problems": [
         {
             "name": "Switching tabs",
+            "number": 0,
             "description": "Switching tabs is a common task in web applications. It involves changing the active tab to display different content. This can be done using JavaScript to manipulate the DOM and update the active state of the tabs.",
             "component": "SwitchingTabsComponent",
-            "tags": ["tabs", "navigation", "ui", "state"],
+            "tags": ["tabs", "navigation", "ui", "state", "hooks"],
             "difficulty": "easy",
             "providedContent": [
                 {
@@ -18,6 +19,20 @@
                 {
                     "name": "Tab 3",
                     "content": "Content for Tab 3"
+                }
+            ]
+        },
+        
+        {
+            "name": "Basic Fetch",
+            "number": 1,
+            "description": "Fetch is a pretty basic API. Using just fetch and React hooks, fetch a query from the provided URL.",
+            "component": "FetchComponent",
+            "tags": ["state", "async", "fetch", "api", "hooks"],
+            "difficulty": "easy",
+            "providedContent": [
+                {
+                    "url": "https://jsonplaceholder.typicode.com/posts"
                 }
             ]
         }
