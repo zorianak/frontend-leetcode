@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SwitchingTabsComponent, FetchComponent } from '../problems';
+import { SwitchingTabsComponent, FetchComponent, LinkedSubmenuComponent, AutocompleteComponent } from '../problems';
 
 export const getProblemComponent = (problemName: string): React.ReactNode | null => {
     console.log(problemName);
@@ -8,6 +8,10 @@ export const getProblemComponent = (problemName: string): React.ReactNode | null
             return <SwitchingTabsComponent />;
         case 'FetchComponent':
             return <FetchComponent />;
+        case 'LinkedSubmenuComponent':
+            return <LinkedSubmenuComponent />;
+        case 'AutocompleteComponent':
+            return <AutocompleteComponent />;
         default:
             return null;
     }

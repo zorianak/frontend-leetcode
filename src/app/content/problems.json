@@ -22,7 +22,6 @@
                 }
             ]
         },
-        
         {
             "name": "Basic Fetch",
             "number": 1,
@@ -35,6 +34,78 @@
                     "url": "https://jsonplaceholder.typicode.com/posts"
                 }
             ]
+        },
+        {
+            "name": "Linked sub-menu",
+            "number": 2,
+            "description": "Certain applications will often have a list of menus with headers that are embedded. Taking the parent header, implement a list that can open/close and contain child lists.",
+            "component": "LinkedSubmenuComponent",
+            "tags": ["state", "linked list"],
+            "difficulty": "medium",
+            "providedContent": [
+                {
+                    "type": "tree",
+                    "nodes": [
+                        {
+                            "name": "Root",
+                            "isDirectory": true,
+                            "children": [
+                                    {
+                                    "name": "Layer 1",
+                                    "isDirectory": true,
+                                    "children": [{
+                                        "name": "Layer 1.1",
+                                        "isDirectory": false
+                                    },{
+                                        "name": "Layer 1.2",
+                                        "isDirectory": false
+                                    }]
+                                },{
+                                    "name": "Layer 2",
+                                    "isDirectory": true,
+                                    "children": [{
+                                        "name": "Layer 2.1",
+                                        "isDirectory": false
+                                    },{
+                                        "name": "Layer 2.2",
+                                        "isDirectory": true,
+                                        "children": [{
+                                            "name": "Layer 2.2.1",
+                                            "isDirectory": false
+                                        }]
+                                    }]
+                                },
+                                {
+                                    "name": "Layer 3",
+                                    "isDirectory": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Autocomplete",
+            "number": 3,
+            "description": "It's pretty common that we have inputs that have autocomplete. What kind of a structure would you expect the input to be? How would you parse that? The output from the API is a list of words and an integer that indicates how often they are searched.",
+            "component": "AutocompleteComponent",
+            "tags": ["state", "tree", "prefix tree", "binary search tree", "search"],
+            "difficulty": "medium",
+            "providedContent": [
+                { "word": "apple", "weight": 42 },
+                { "word": "apply", "weight": 17 },
+                { "word": "banana", "weight": 89 },
+                { "word": "band", "weight": 23 },
+                { "word": "cat", "weight": 56 },
+                { "word": "caterpillar", "weight": 34 },
+                { "word": "catty", "weight": 78 },
+                { "word": "excavate", "weight": 12 },
+                { "word": "war", "weight": 45 },
+                { "word": "world", "weight": 67 },
+                { "word": "worn", "weight": 29 },
+                { "word": "word", "weight": 91 }
+              ]
         }
     ]
 }

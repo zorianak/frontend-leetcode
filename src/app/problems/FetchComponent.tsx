@@ -24,10 +24,6 @@ export default function FetchComponent() {
             }
         }
         fetchData();
-
-        return () => {
-            controller.abort()
-        }
     }, []);
 
     const renderContent = () =>  {
