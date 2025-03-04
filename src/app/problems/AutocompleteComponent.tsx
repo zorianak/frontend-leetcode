@@ -17,7 +17,7 @@ export default function AutocompleteComponent() {
         providedContent.forEach((item: { word: string }) => {
             trie.insert(item.word);
         });
-    }, [providedContent, trie]); 
+    }, []); 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
