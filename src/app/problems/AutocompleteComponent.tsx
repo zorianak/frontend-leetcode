@@ -6,6 +6,7 @@ export default function AutocompleteComponent() {
     const { problems } = problemsData;
     const { name, description, tags, difficulty, providedContent } = problems[3];
     const [suggestions, setSuggestions] = React.useState<string[]>([]);
+    const [inputValue, setInputValue] = React.useState<string>('');
 
     // memoize the trie for performance, cache its value
     const trie = React.useMemo(() => createTrie(), []);
@@ -20,6 +21,8 @@ export default function AutocompleteComponent() {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
+        setInputValue(value);
+
         if (value) {
             const words = trie.getWordsWithPrefix(value);
             setSuggestions(words.length > 0 ? words : []);
@@ -27,6 +30,14 @@ export default function AutocompleteComponent() {
             setSuggestions([]);
         }
     };
+
+    const Suggestion = ({ word }: { word: string }) => {
+        const handleClick = () => {
+            setInputValue(word);
+            setSuggestions([]);
+        }
+        return <li><button onClick={handleClick}>{word}</button></li>;
+    }
 
     return (
         <div>
@@ -38,10 +49,10 @@ export default function AutocompleteComponent() {
             <div className="description">{description}</div>
 
             <div className="linked-submenu">
-                <input type="text" placeholder="Search for a problem..." onChange={handleChange} />
+                <input type="text" value={inputValue} placeholder="Search for a problem..." onChange={handleChange} />
                 <ul>
-                    {suggestions.map((suggestion, index) => (
-                        <li key={index}>{suggestion}</li>
+                    {suggestions.map((suggestion, idx) => (
+                        <Suggestion key={idx} word={suggestion} />
                     ))}
                 </ul>
             </div>
