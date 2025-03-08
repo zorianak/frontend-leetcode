@@ -48,7 +48,7 @@ export default function AutocompleteComponent() {
             </div>
             <div className="description">{description}</div>
 
-            <div className="linked-submenu">
+            <div className="autocomplete-submenu">
                 <input type="text" value={inputValue} placeholder="Search for a problem..." onChange={handleChange} />
                 <ul>
                     {suggestions.map((suggestion, idx) => (
